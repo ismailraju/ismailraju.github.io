@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismail Hossain Raju - Senior Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: #0a192f;
+            color: #ccd6f6;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #0a192f;
+            border-bottom: 1px solid #233554;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #64ffda;
+            margin: 0 auto 20px;
+            background-color: #112240;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64ffda;
+            font-size: 60px;
+        }
+        
+        h1 {
+            color: #ccd6f6;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            color: #8892b0;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #ccd6f6;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #64ffda;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            color: #ccd6f6;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Source Code Pro', monospace;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #64ffda;
+        }
+        
+        .about {
+            background-color: #0a192f;
+        }
+        
+        .skills {
+            background-color: #112240;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            margin-bottom: 30px;
+        }
+        
+        .skill-category h3 {
+            color: #ccd6f6;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #0a192f;
+            border-left: 2px solid #64ffda;
+            display: flex;
+            align-items: center;
+        }
+        
+        .skill-list li i {
+            margin-right: 10px;
+            color: #64ffda;
+        }
+        
+        .projects {
+            background-color: #0a192f;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .project-card {
+            background-color: #112240;
+            padding: 25px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            border: 1px solid #233554;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card h3 {
+            color: #ccd6f6;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .project-card .date {
+            color: #64ffda;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .project-card p {
+            color: #8892b0;
+            margin-bottom: 15px;
+        }
+        
+        .project-card .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .project-card .tech {
+            background-color: #0a192f;
+            color: #64ffda;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-family: 'Source Code Pro', monospace;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #64ffda;
+            border: 1px solid #64ffda;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+        }
+        
+        .experience {
+            background-color: #112240;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #64ffda;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: #0a192f;
+            position: relative;
+            border-radius: 5px;
+            border: 1px solid #233554;
+        }
+        
+        .timeline-content h3 {
+            color: #ccd6f6;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content .company {
+            color: #64ffda;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .timeline-content .date {
+            color: #8892b0;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .timeline-content p {
+            color: #8892b0;
+        }
+        
+        .education {
+            background-color: #0a192f;
+        }
+        
+        footer {
+            background-color: #020c1b;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        
+        .copyright {
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>MD Ismail Hossain Raju</h1>
+            <div class="title">Senior Software Engineer | Java & Spring Specialist</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ismail-hossain-raju-b21945b0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:ismailhossainraju74@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="leetcode.com/ismailhossainraju74/" target="_blank"><i class="fas fa-code"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Experienced Senior Software Engineer with expertise in Java and Spring ecosystem. Skilled in developing robust, scalable applications using Spring Boot, Microservices, and various database technologies. Passionate about solving complex problems and delivering high-quality software solutions.</p>
+            <p>With over 7 years of experience in the software industry, I have worked on diverse projects ranging from e-commerce platforms to biometric systems and government stipend management systems.</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fas fa-leaf"></i> Spring Boot</li>
+                        <li><i class="fas fa-cloud"></i> Spring Cloud</li>
+                        <li><i class="fas fa-code"></i> Spring MVC</li>
+                        <li><i class="fas fa-shield-alt"></i> Spring Security</li>
+                        <li><i class="fas fa-database"></i> Hibernate</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Database & Tools</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        <li><i class="fas fa-database"></i> Oracle</li>
+                        <li><i class="fas fa-server"></i> Apache Tomcat</li>
+                        <li><i class="fas fa-server"></i> Wildfly</li>
+                        <li><i class="fas fa-box"></i> Docker</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Other Technologies</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-bolt"></i> REST APIs</li>
+                        <li><i class="fas fa-search"></i> ELK Stack</li>
+                        <li><i class="fas fa-stream"></i> Apache Kafka</li>
+                        <li><i class="fas fa-print"></i> JasperReports</li>
+                        <li><i class="fas fa-memory"></i> Redis</li>
+                        <li><i class="fas fa-cogs"></i> Jenkins</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <span class="date">June 2023 – Present</span>
+                    <p>Microservice-based e-commerce solution with multiple integrated services.</p>
+                    <div class="technologies">
+                        <span class="tech">Microservice</span>
+                        <span class="tech">Spring Cloud</span>
+                        <span class="tech">NoSql</span>
+                        <span class="tech">RDBMS</span>
+                        <span class="tech">MessageBroker</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Profile Management API</h3>
+                    <span class="date">March 2023 – June 2023</span>
+                    <p>RESTful API for managing user profiles with secure authentication.</p>
+                    <div class="technologies">
+                        <span class="tech">Spring Boot</span>
+                        <span class="tech">Hibernate</span>
+                        <span class="tech">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Grievance Redress System (GRS)</h3>
+                    <span class="date">August 2022 – June 2023</span>
+                    <p>System for managing and resolving grievances with tracking capabilities.</p>
+                    <div class="technologies">
+                        <span class="tech">Spring Boot</span>
+                        <span class="tech">Hibernate</span>
+                        <span class="tech">MySQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="company">Syntax Solution Limited</span>
+                        <span class="date">July 2023 – Present</span>
+                        <p>Developing and maintaining enterprise-level applications using Java and Spring ecosystem.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Software Engineer Java Software Developer</h3>
+                        <span class="company">Integrated Software and Technologies Ltd.</span>
+                        <span class="date">December 2017 – June 2023</span>
+                        <p>Developed multiple government and enterprise projects using Java technologies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Junior Software Developer</h3>
+                        <span class="company">Ivivelabs</span>
+                        <span class="date">April 2016 – November 2017</span>
+                        <p>WordPress Plugin, Theme Development & Web Development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>BSc in Computer Science & Engineering</h3>
+                        <span class="company">Military Institute of Science & Technology</span>
+                        <span class="date">Graduated in 2016</span>
+                        <p>Focused on software engineering, algorithms, and data structures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>I'm always open to discussing new opportunities and interesting projects.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ismail-hossain-raju-b21945b0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ismailhossainraju74@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="leetcode.com/ismailhossainraju74/" target="_blank"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 MD Ismail Hossain Raju. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
